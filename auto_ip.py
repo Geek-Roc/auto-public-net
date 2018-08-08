@@ -87,9 +87,10 @@ def checkIP():
         textList.insert(1, nowtime)
         content = '\n'.join(textList)
         sendIP(content)
-        textList.clear()
-    
-    print('IP not change')
+    else:
+        print('IP not change')
+
+    textList.clear()
     t = threading.Timer(66.0, checkIP)
     t.start()
 
